@@ -1,0 +1,157 @@
+body
+    .header
+        position: fixed
+        width: 100%
+        top: 0
+        left: 0
+        z-index: 50
+        padding-top: 24px
+        // .header:before
+        //     content:""
+        //         position: absolute
+        //         top: 0
+        //         left: 0
+        //         width: 100%
+        //         height: 100%
+        .subtitle
+            margin: 12px 0 24px 0
+            opacity: 54%
+        .nav
+            position: relative
+            z-index: 2
+            padding: 30px 0 
+            display: flex
+            align-items: center
+            justify-content: space-between
+        .menu
+            display: flex
+            gap: 37px
+            align-items: center
+        .menu-ul
+            display: flex
+            gap: 37px
+            align-items: center
+        .menu-link
+            opacity: 87%
+            &:hover
+                color: var(--green)
+                opacity: 87%
+        .search-btn
+            border: none
+            background-color: transparent
+            cursor: pointer
+        .trial-link
+            padding: 13px 66px
+            border-radius: 28px 28px 0px 28px   
+    .articles
+        padding: 104px 0 177px 0
+        .articles-title
+            padding-bottom: 48px
+        .items-subscribe-wrapper
+            display: flex
+            justify-content: center
+            gap: 16px
+        .article-items-wrapper
+            width: 75%
+            display: flex
+            gap: 16px
+        .article-item
+            width: 100%
+            max-width: 398px
+        .img-figure
+            position: relative
+            padding-top: 106%
+        .aricle-img
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            object-fit: cover
+            border-radius: 20px 0 
+            flex: none
+        .item-p, .item-link
+            opacity: 54%
+        .item-p-author
+            margin: 16px 0 8px 0
+        .item-p
+            margin: 8px 0
+        .article-title
+            display: -webkit-box
+            -webkit-line-clamp: 1
+            -webkit-box-orient: vertical
+            overflow: hidden
+        .arrow-img
+            transform: translateY(30%)
+        .subscribe
+            padding: 48px 3% 86px 3%
+            text-align: center
+            width: 25%
+            max-width: 398px
+        .subscribe-p
+            max-width: 293px
+            margin: 78px auto 68px auto
+        .subscribe-link
+            padding: 20px 22.5%
+            border-radius: 6px
+            box-shadow: 0px 2px 2px var(--black100)
+        .follow-us
+            margin: 104px 0 27px
+        .website-link
+            margin: 0 4%   
+
+@media only screen and (max-width: 1440px)   
+    body
+        .header
+        .articles
+            .subscribe
+                padding: 48px 1.5% 46px 1.5%
+            .subscribe-p
+                margin-top: 58px
+            .subscribe-link 
+                padding: 20px 12.5%
+
+@media only screen and (max-width: 1200px)   
+    body
+        .articles
+            // padding: 60px 0 100px
+            .items-subscribe-wrapper
+                display: block
+            .article-items-wrapper
+                width: 100%
+            .subscribe
+                width: 33%
+                margin-top: 50px
+
+@media only screen and (max-width: 992px)  
+    body
+        .header 
+
+
+@media only screen and (max-width: 768px)  
+    body
+        .articles
+            .article-items-wrapper
+                flex-wrap: wrap
+            .article-item
+                width: 48%
+                margin-bottom: 30px
+            .subscribe
+                width: 48%
+                padding: 48px 52px
+
+@media only screen and (max-width: 667px)  
+    body
+        .articles
+            .article-item
+                width: 100%
+                max-width: 667px
+            .subscribe
+                width: 100%
+                max-width: 667px
+
+
+
+
+
+            
