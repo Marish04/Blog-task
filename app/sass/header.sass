@@ -1,28 +1,17 @@
 body
     .header
-        position: fixed
-        width: 100%
-        top: 0
-        left: 0
-        z-index: 50
         padding-top: 24px
-        // .header:before
-        //     content:""
-        //         position: absolute
-        //         top: 0
-        //         left: 0
-        //         width: 100%
-        //         height: 100%
         .subtitle
             margin: 12px 0 24px 0
             opacity: 54%
         .nav
             position: relative
-            z-index: 2
             padding: 30px 0 
             display: flex
             align-items: center
             justify-content: space-between
+        .burger
+            display: none
         .menu
             display: flex
             gap: 37px
@@ -81,8 +70,9 @@ body
             -webkit-line-clamp: 1
             -webkit-box-orient: vertical
             overflow: hidden
-        .arrow-img
-            transform: translateY(30%)
+        .item-link
+            display: flex
+            align-items: center
         .subscribe
             padding: 48px 3% 86px 3%
             text-align: center
@@ -102,7 +92,6 @@ body
 
 @media only screen and (max-width: 1440px)   
     body
-        .header
         .articles
             .subscribe
                 padding: 48px 1.5% 46px 1.5%
@@ -114,19 +103,79 @@ body
 @media only screen and (max-width: 1200px)   
     body
         .articles
-            // padding: 60px 0 100px
+            padding: 60px 0 0 0
             .items-subscribe-wrapper
                 display: block
             .article-items-wrapper
                 width: 100%
             .subscribe
-                width: 33%
+                width: 100%
+                max-width: 1200px
                 margin-top: 50px
 
 @media only screen and (max-width: 992px)  
     body
         .header 
-
+            .burger
+                background-color: transparent
+                border: none
+                display: block
+                position: relative
+                width: 30px
+                height: 20px
+                z-index: 5
+            .burger span
+                position: absolute
+                background-color: var(--black)
+                left: 0
+                width: 100%
+                height: 2px
+                top: 9px
+            .burger:before,
+            .burger:after
+                content: ""
+                background-color: var(--black)
+                position: absolute
+                width: 100%
+                height: 2px
+                left: 0
+                transition: all 0.3s ease 0s
+            .burger:before
+                top: 0
+            .burger:after
+                bottom: 0
+            .nav
+                position: relative
+            .menu
+                display: none
+            .menu.open
+                display: block
+                position: absolute
+                top: 0
+                left: 0
+                padding: 120px 0 0 0
+                background-color: var(--blue)
+                z-index: 4
+                display: block
+                width: 106%
+                margin: 0 -3%
+            .menu-ul
+                display: block
+            .menu-ul li
+                margin: 20px 30px  
+            .search-btn
+                margin: 0 0 20px 22px 
+            .trial-link
+                z-index: 4
+            .burger.open span
+                transform: scale(0)
+                transition: all 0.3s ease 0s
+            .burger.open:before 
+                transform: rotate(45deg)
+                top: 9px
+            .burger.open:after 
+                transform: rotate(-45deg)
+                bottom: 9px
 
 @media only screen and (max-width: 768px)  
     body
@@ -136,17 +185,14 @@ body
             .article-item
                 width: 48%
                 margin-bottom: 30px
-            .subscribe
-                width: 48%
-                padding: 48px 52px
 
 @media only screen and (max-width: 667px)  
     body
+        .header
+            .trial-link 
+                padding: 13px 40px 
         .articles
             .article-item
-                width: 100%
-                max-width: 667px
-            .subscribe
                 width: 100%
                 max-width: 667px
 
