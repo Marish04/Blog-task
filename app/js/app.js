@@ -1,8 +1,3 @@
-// $(document).ready(function () {
-//     $('.burger').click(function(event) {
-//         $('.burger,.menu').toggleClass('active');
-//     });
-// });
 
 const menuBtn = document.querySelector(".burger");
 const menu = document.querySelector(".menu");
@@ -18,23 +13,3 @@ menuBtn.addEventListener("click", () => {
         menuOpen = false;
     }
 });
-
-// const menuBtn = document.querySelector(".burger");
-// const menu = document.querySelector(".menu");
-// let menuOpen = false;
-// menuBtn.addEventListener("click", () => {
-//     if(!menuOpen) {
-//         menu.classList.add("open");
-//         menuOpen = true;
-//     } else {
-//         menu.classList.remove("open");
-//         menuOpen = false;
-//     }
-// });
-
-
-
-
-
-
-
